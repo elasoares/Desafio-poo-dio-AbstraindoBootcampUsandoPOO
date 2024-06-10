@@ -7,6 +7,7 @@ public class Main {
 
        Curso  curso1 = new Curso();
 
+
         curso1.setTitulo("Curso Java");
         curso1.setDescricao("Descrição do curso de Java");
         curso1.setCargaHoraria(8);
