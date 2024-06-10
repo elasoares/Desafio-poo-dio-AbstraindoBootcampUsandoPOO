@@ -1,6 +1,4 @@
-import br.com.dio.desafio.dominio.Conteudo;
-import br.com.dio.desafio.dominio.Curso;
-import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.*;
 
 import java.time.LocalDate;
 
@@ -33,7 +31,50 @@ public class Main {
         System.out.println(mentoria2);
 
 
+     BootCamp bootCamp = new BootCamp();
+     bootCamp.setNome("BootCamp Java Developer");
+     bootCamp.setDescricao("Descrição Java Developer");
+     bootCamp.getConteudos().add(curso1);
+     bootCamp.getConteudos().add(curso2);
+     bootCamp.getConteudos().add(mentoria1);
+     bootCamp.getConteudos().add(mentoria2);
 
+     System.out.println();
+     System.out.println("==============================================================");
+     System.out.println();
+
+     Dev developer1 = new Dev();
+     developer1.setNome("Elaine");
+     developer1.increverBootCamp(bootCamp);
+     System.out.println("Conteúdos inscritos de Elaine: " + developer1.getConteudosInscritos());
+     System.out.println();
+     developer1.progredir();
+     System.out.println();
+     System.out.println("Conteúdos concluídos de Elaine: " + developer1.getConteudosConcluidos());
+     System.out.println();
+     System.out.println("Conteúdos para concluir de Elaine: " + developer1.getConteudosInscritos());
+     System.out.println("XP: " + developer1.calcularXP());
+
+     System.out.println();
+     System.out.println("==============================================================");
+     System.out.println();
+
+     Dev developer2 = new Dev();
+     developer2.setNome("Daniel");
+     developer2.increverBootCamp(bootCamp);
+
+     System.out.println("Conteúdos inscritos de Daniel: " + developer2.getConteudosInscritos());
+     System.out.println();
+
+     developer2.progredir();
+     developer2.progredir();
+
+     System.out.println();
+     System.out.println("Conteúdos concluídos de Daniel: " + developer1.getConteudosConcluidos());
+     System.out.println();
+
+     System.out.println("Conteúdos para concluir de Daniel: " + developer2.getConteudosInscritos());
+     System.out.println("XP: " + developer2.calcularXP());
 
     }
 }
