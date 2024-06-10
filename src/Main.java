@@ -67,6 +67,7 @@ public class Main {
      System.out.println();
 
      developer2.progredir();
+
      developer2.progredir();
 
      System.out.println();
